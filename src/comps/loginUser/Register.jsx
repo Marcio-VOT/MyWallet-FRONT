@@ -41,7 +41,7 @@ export default () => {
         <input
           disabled={disable}
           required
-          placeholder="nome"
+          placeholder="Nome"
           type="text"
           name="name"
           id="name"
@@ -51,7 +51,7 @@ export default () => {
         <input
           disabled={disable}
           required
-          placeholder="email"
+          placeholder="E-mail"
           type="email"
           name="email"
           id="email"
@@ -61,7 +61,7 @@ export default () => {
         <input
           disabled={disable}
           required
-          placeholder="senha"
+          placeholder="Senha"
           type="password"
           name="password"
           id="password"
@@ -71,7 +71,7 @@ export default () => {
         <input
           disabled={disable}
           required
-          placeholder="confirme a senha"
+          placeholder="Confirme a senha"
           type="password"
           name="password"
           id="password"
@@ -132,6 +132,13 @@ const RegisterStyle = styled.div`
     background: #ffffff;
     border: 1px solid #d5d5d5;
     border-radius: 5px;
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    padding-left: 15px;
+    color: #000000;
   }
   button {
     display: flex;

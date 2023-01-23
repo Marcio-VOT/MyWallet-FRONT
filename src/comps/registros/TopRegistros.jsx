@@ -7,15 +7,18 @@ import { LoginContext } from "../../context/UserData";
 import axios from "axios";
 
 export default () => {
+  const navigate = useNavigate();
   const { name, setName, setToken } = useContext(LoginContext);
   return (
     <StyleTop>
       <h1> Olá, {name} </h1>
       <ion-icon
         name="log-out"
-        onClick={() => {
+        onClick={(e) => {
+          e.preventDefault();
           setName("");
           setToken("");
+          navigate("/");
         }}
       ></ion-icon>
     </StyleTop>
@@ -34,8 +37,6 @@ const StyleTop = styled.div`
     font-weight: 700;
     font-size: 26px;
     line-height: 31px;
-    /* identical to box height */
-
     color: #ffffff;
   }
   ion-icon {

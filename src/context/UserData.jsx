@@ -1,6 +1,4 @@
-import axios from "axios";
 import React, { useState, createContext } from "react";
-import { useEffect } from "react";
 
 export const LoginContext = createContext();
 

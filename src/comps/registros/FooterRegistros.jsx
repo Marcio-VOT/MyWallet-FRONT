@@ -5,18 +5,23 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { LoginContext } from "../../context/UserData";
 import axios from "axios";
+import { useEffect } from "react";
 
 export default () => {
   return (
     <FooterBase>
-      <button>
-        <ion-icon name="add-circle-outline"></ion-icon>
-        <h1>Nova Entrada</h1>
-      </button>
-      <button>
-        <ion-icon name="remove-circle-outline"></ion-icon>
-        <h1>Nova Saida</h1>
-      </button>
+      <Link to={"/nova-entrada"}>
+        <button>
+          <ion-icon name="add-circle-outline"></ion-icon>
+          <h1>Nova Entrada</h1>
+        </button>
+      </Link>
+      <Link to={"/nova-saida"}>
+        <button>
+          <ion-icon name="remove-circle-outline"></ion-icon>
+          <h1>Nova Saida</h1>
+        </button>
+      </Link>
     </FooterBase>
   );
 };
@@ -26,10 +31,15 @@ const FooterBase = styled.div`
   justify-content: space-between;
   bottom: 0;
   width: 100%;
-  padding: 0 6.5% 16px 6.5%;
+  padding-left: 6.5%;
+  padding-right: 6.5%;
+  padding-bottom: 16px;
+  a {
+    width: 48%;
+  }
   button {
     background-color: transparent;
-    width: 48%;
+    width: 100%;
     height: 114px;
     position: relative;
     background: #a328d6;
