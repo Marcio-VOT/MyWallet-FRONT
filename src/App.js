@@ -1,15 +1,22 @@
 import React from "react";
 import GlobalStyleComponent from "./GlobalStyle";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useContext } from "react";
+import { LoginProvider } from "./context/UserData";
+import Login from "./comps/loginUser/Login";
+import Register from "./comps/loginUser/Register";
+import RegistrosData from "./comps/registros/RegistrosData";
 
 export default () => {
   return (
     <BrowserRouter>
       <GlobalStyleComponent />
-      <Routes>
-        <Route path="/" element={<></>} />
-      </Routes>
+      <LoginProvider>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/cadastro" element={<Register />} />
+          <Route path="/home" element={<RegistrosData />} />
+        </Routes>
+      </LoginProvider>
     </BrowserRouter>
   );
 };
