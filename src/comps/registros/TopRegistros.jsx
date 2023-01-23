@@ -11,7 +11,7 @@ export default () => {
   const { name, setName, setToken } = useContext(LoginContext);
   return (
     <StyleTop>
-      <h1> Olá, {name} </h1>
+      <h1> Olá{name && ", " + name} </h1>
       <ion-icon
         name="log-out"
         onClick={(e) => {
