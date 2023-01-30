@@ -19,9 +19,10 @@ export default () => {
     axios
       .get(URL, config)
       .then((ans) => {
-        console.log(ans.data);
-        setDataList(ans.data[1]);
-        setTotal(ans.data[0]);
+        if (ans.data[0]) {
+          setDataList(ans.data[1]);
+          setTotal(ans.data[0]);
+        }
       })
       .catch((err) => {
         //navigate("/");
